@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กฎหมายคุ้มครองแรงงานไทย | Dashboard</title>
+<style>
+:root{
+  --bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#64748b;
+  --primary:#1d4ed8;--primary2:#eff6ff;--border:#e2e8f0;
+  --green:#047857;--orange:#c2410c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans Thai","Tahoma",sans-serif}
+a{color:inherit}
+.header{background:linear-gradient(135deg,#172554,#1d4ed8);color:white;padding:28px 0}
+.container{max-width:1200px;margin:auto;padding:0 22px}
+.header h1{margin:0 0 6px;font-size:30px}.header p{margin:0;color:#dbeafe}
+.nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.nav .container{display:flex;gap:10px;align-items:center;height:56px}
+.nav a{text-decoration:none;padding:9px 13px;border-radius:9px;font-size:14px}
+.nav a:hover,.nav a.active{background:var(--primary2);color:var(--primary)}
+main{padding:28px 0 50px}
+.hero{display:grid;grid-template-columns:1fr 330px;gap:18px;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 5px 20px rgba(15,23,42,.04)}
+.hero .card{padding:22px}
+.hero h2{margin:0 0 8px;font-size:21px}.hero p{color:var(--muted);line-height:1.7}
+.stat{display:flex;align-items:center;justify-content:space-between;margin:9px 0;padding:12px 14px;background:#f8fafc;border-radius:10px}
+.stat b{font-size:20px}.stat span{color:var(--muted);font-size:13px}
+.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-bottom:12px}
+.search{width:300px;padding:11px 13px;border:1px solid var(--border);border-radius:10px;font-size:14px}
+.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:900px}
+.table th{background:#f8fafc;text-align:left;font-size:13px;color:#475569;padding:13px;border-bottom:1px solid var(--border)}
+.table td{padding:14px 13px;border-bottom:1px solid var(--border);vertical-align:top;font-size:14px;line-height:1.6}
+.table tr:last-child td{border-bottom:0}
+.version{display:inline-block;padding:5px 9px;border-radius:8px;background:var(--primary2);color:var(--primary);text-decoration:none;font-weight:700;white-space:nowrap}
+.version:hover{text-decoration:underline}
+.latest{background:#ecfdf5;color:var(--green);padding:4px 8px;border-radius:999px;font-size:11px;margin-left:5px}
+.detail{margin-top:20px;padding:24px}
+.detail h2{margin-top:0}.detail h3{margin-bottom:6px}.detail p,.detail li{line-height:1.75}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.detail-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:16px}
+.back{display:inline-block;margin-bottom:14px;color:var(--primary);text-decoration:none;font-size:14px}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:30px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.toolbar{align-items:stretch;flex-direction:column}.search{width:100%}}
+</style>
+<style>
+:root{--primary:#7a4b2a;--primary2:#f4e9df;--green:#6b5b35;--border:#e4d6ca} .header{background:linear-gradient(135deg,#3b2418,#7a4b2a)} .version{background:#f4e9df;color:#6b3f22} .latest{background:#efe6d7;color:#6b5b35}</style>
+</head>
+<body>
+<body><header class="header"><div class="container"><h1>กฎหมายคุ้มครองแรงงานไทย</h1><p>Dashboard ตารางหลัก พ.ร.บ.คุ้มครองแรงงาน พ.ศ. 2541 และฉบับแก้ไขเพิ่มเติม ฉบับที่ 2–9</p></div></header><nav class="nav"><div class="container"><a href="labour_law_dashboard.html" class="active">Dashboard</a><a href="law-2541-full.html">พ.ร.บ. 2541 ฉบับหลัก</a></div></nav><main><div class="container"><section class="card" style="padding:20px"><div class="toolbar"><div><h2 style="margin:0">ตารางกฎหมายคุ้มครองแรงงาน</h2><small style="color:#64748b">Dashboard แสดงเฉพาะตาราง — กดฉบับเพื่อเปิดหน้าเว็บรายละเอียดแยก</small></div><input id="search" class="search" placeholder="ค้นหา เช่น ลาคลอด, ค่าชดเชย, WFH"></div><div class="table-wrap"><table class="table"><thead><tr><th>ฉบับ</th><th>ปี</th><th>หัวข้อหลัก</th><th>สาระสำคัญโดยย่อ</th></tr></thead><tbody id="lawTable"><tr><td><a class="version" href="law-2.html">ฉบับที่ 2</a></td><td>2551</td><td>คุ้มครองลูกจ้างและการจ้างงาน</td><td>ลูกจ้างเหมาค่าแรง หลักประกัน สัญญาที่ไม่เป็นธรรม การย้ายสถานประกอบการ และการคุกคามทางเพศ</td></tr>
+<tr><td><a class="version" href="law-3.html">ฉบับที่ 3</a></td><td>2551</td><td>ระบบค่าจ้าง</td><td>ปรับระบบค่าจ้างขั้นต่ำและเพิ่มแนวคิดอัตราค่าจ้างตามมาตรฐานฝีมือ</td></tr>
+<tr><td><a class="version" href="law-4.html">ฉบับที่ 4</a></td><td>2553</td><td>ความปลอดภัยในการทำงาน</td><td>ยกเลิกหมวดความปลอดภัยจาก พ.ร.บ.คุ้มครองแรงงาน เพื่อรองรับกฎหมายความปลอดภัยเฉพาะ</td></tr>
+<tr><td><a class="version" href="law-5.html">ฉบับที่ 5</a></td><td>2560</td><td>แรงงานเด็ก</td><td>เพิ่มโทษและมาตรการเกี่ยวกับการใช้แรงงานเด็ก</td></tr>
+<tr><td><a class="version" href="law-6.html">ฉบับที่ 6</a></td><td>2560</td><td>เกษียณอายุ</td><td>เพิ่มหลักเกณฑ์เกษียณอายุและสิทธิค่าชดเชยกรณีเกษียณ รวมถึงปรับเรื่องค่าจ้างบางกลุ่ม</td></tr>
+<tr><td><a class="version" href="law-7.html">ฉบับที่ 7</a></td><td>2562</td><td>สิทธิการลาและค่าชดเชย</td><td>ลากิจธุระอันจำเป็น ลาคลอด 98 วัน และเพิ่มค่าชดเชยกรณีอายุงาน 20 ปีขึ้นไปเป็น 400 วัน</td></tr>
+<tr><td><a class="version" href="law-8.html">ฉบับที่ 8</a></td><td>2566</td><td>Work From Home</td><td>รองรับการทำงานที่บ้านหรือสถานที่อื่นโดยใช้เทคโนโลยีสารสนเทศ</td></tr>
+<tr><td><a class="version" href="law-9.html">ฉบับที่ 9</a><span class="latest">ล่าสุด</span></td><td>2568</td><td>สิทธิการลาและครอบครัว</td><td>ลาคลอด 120 วัน ลาช่วยเหลือคู่สมรส 15 วัน และสิทธิลาเพื่อดูแลบุตรกรณีพิเศษตามเงื่อนไข</td></tr></tbody></table></div></section></div></main><footer>จัดทำเป็นหน้าเว็บสำหรับใช้อ้างอิงเบื้องต้น — ควรตรวจสอบตัวบทกฎหมายและราชกิจจานุเบกษาฉบับเต็มก่อนใช้ประกอบการดำเนินการทางกฎหมาย</footer><script>const search=document.getElementById('search');search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();document.querySelectorAll('#lawTable tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(q)?'':'none');});</script></body></html>
